@@ -12,13 +12,20 @@
 hs_err_pid*
 
 #maven target dir#
-*/target/**
+base/*/target/**
+lab/*/target/**
 
 #eclipse project files#
-*/.project
-*/.classpath
-*/.settings/**
+base/*/.project
+lab/*/.project
+base/*/.classpath
+lab/*/.classpath
+base/*/.settings/**
+lab/*/.settings/**
 
 #idea project files#
-*/.idea/**
-*/.iml
+.idea/**
+base/*/.idea/**
+lab/*/.idea/**
+base/*/*.iml
+lab/*/*.iml
