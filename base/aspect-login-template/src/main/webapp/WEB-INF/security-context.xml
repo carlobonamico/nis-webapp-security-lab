@@ -12,8 +12,10 @@
 	<http pattern="/static/**" security="none"/>
 	<http use-expressions="true" disable-url-rewriting="true">
 
+		<!--
 		<intercept-url pattern="/admin**" access="hasRole('ROLE_ADMIN')" />
         <intercept-url pattern="/welcome**" access="hasRole('ROLE_USER')" />
+        -->
 
 		<!-- access denied page -->
 		<access-denied-handler error-page="/403" />
