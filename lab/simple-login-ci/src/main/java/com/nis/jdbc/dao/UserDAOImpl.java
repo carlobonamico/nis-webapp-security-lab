@@ -50,7 +50,7 @@ public class UserDAOImpl implements UserDAO {
     
     public User getUserByLastName(String username, String password) {
 
-        String sql = "select * from users where username='"+username+"' and password='"+password+"'";
+        String sql = "select * ";
         System.out.println("### SQL: "+sql+" ###");
         User user = null;
         try(
