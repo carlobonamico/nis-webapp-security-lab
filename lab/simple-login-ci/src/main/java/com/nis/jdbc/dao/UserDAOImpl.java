@@ -47,4 +47,29 @@ public class UserDAOImpl implements UserDAO {
         return user;
 
     }
+    
+    public User getUserByLastName(String username, String password) {
+
+        String sql = "select * from users where username='"+username+"' and password='"+password+"'";
+        System.out.println("### SQL: "+sql+" ###");
+        User user = null;
+        try(
+                Connection c = dataSource.getConnection();
+                Statement s = c.createStatement();
+        ){
+            ResultSet rs = s.executeQuery(sql);
+            while(rs.next()){
+                user = new User();
+                user.setUsername(rs.getString("username"));
+                user.setPassword(rs.getString("password"));
+                user.setEnabled(Boolean.getBoolean(rs.getString("enabled")));
+            }
+
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return user;
+
+    }
 }
