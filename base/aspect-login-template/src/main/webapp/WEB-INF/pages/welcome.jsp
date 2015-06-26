@@ -1,3 +1,4 @@
+<%@ page import="org.springframework.security.core.context.SecurityContextHolder" %>
 <%@taglib prefix="sec"
 	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -18,7 +19,7 @@
 
                     <form action="<c:url value="/j_spring_security_logout"/>" method="post" id="logoutForm" class="form-signin">
 
-                        <h3 class="form-signin-heading">Welcome Back! ${pageContext.request.userPrincipal.name}</h3>
+                        <h3 class="form-signin-heading">Welcome Back! <%=SecurityContextHolder.getContext().getAuthentication().getName() %></h3>
                         <hr class="colorgraph"><br>
 
                         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />

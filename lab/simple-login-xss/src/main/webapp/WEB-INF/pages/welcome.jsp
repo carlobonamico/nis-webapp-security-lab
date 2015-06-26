@@ -25,7 +25,7 @@
                             <%= ESAPI.encoder().encodeForHTML("1\"><script>document.getElementById(\"welcomeTitle\").innerHTML=\"SALVE\"</script>")%></textarea>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="msgText" name="msgText" class="form-control" value="${msgText}" >
+                        <input type="text" id="msgText" name="msgText" class="form-control" value="${msgText}">
                     </div>
                     <div class="form-group">
                         <button class="btn btn-lg btn-primary btn-block"  name="Submit" type="Submit">Send Message</button>

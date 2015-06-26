@@ -36,7 +36,7 @@ public class MainController {
         ModelAndView model = new ModelAndView();
 		System.out.println("### msgText: "+msgText+" ###");
         if(request.getSession().getAttribute("userDetails")!=null){
-			model.addObject("msgText",msgText);
+			model.addObject("msgText",ESAPI.encoder().encodeForHTML(msgText));
             model.setViewName("welcome");
         } else {
             model.addObject("error", "Authentication required!");

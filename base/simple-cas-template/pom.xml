@@ -79,9 +79,11 @@
                 <configuration>
                     <port>9090</port>
                     <path>/cas</path>
+                    <!--  
                     <httpsPort>9443</httpsPort>
                     <keystoreFile>c:/localkeystore</keystoreFile>
                     <keystorePass>changeit</keystorePass>
+                    -->
                 </configuration>
             </plugin>
         </plugins>
