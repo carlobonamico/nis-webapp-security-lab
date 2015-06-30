@@ -28,6 +28,7 @@
 				authentication-failure-url="/login?error"
 				username-parameter="username"
 				password-parameter="password" />
+				
 		<logout logout-success-url="/login?logout" invalidate-session="true"  />
 		<!-- enable csrf protection -->
 		<csrf/>

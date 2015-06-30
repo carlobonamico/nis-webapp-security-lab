@@ -20,6 +20,10 @@
 
                         <h3 class="form-signin-heading">Welcome Back! ${pageContext.request.userPrincipal.name}</h3>
                         <hr class="colorgraph"><br>
+                        
+                        <sec:authorize url="/admin">
+		                	<a href="<c:url value="/admin" />">admin link</a>
+		                </sec:authorize>
 
                         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 
@@ -27,6 +31,7 @@
                     </form>
 
                 </sec:authorize>
+               
 
             </div>
         </div>

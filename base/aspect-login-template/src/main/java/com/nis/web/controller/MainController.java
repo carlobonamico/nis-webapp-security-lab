@@ -1,6 +1,7 @@
 package com.nis.web.controller;
 
 import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -31,7 +32,7 @@ public class MainController {
 
 	}
 
-	@Secured({"ROLE_ADMIN"})
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@RequestMapping(value = "/admin**", method = RequestMethod.GET)
 	public ModelAndView adminPage() {
 

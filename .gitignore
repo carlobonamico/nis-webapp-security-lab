@@ -29,3 +29,5 @@ base/*/.idea/**
 lab/*/.idea/**
 base/*/*.iml
 lab/*/*.iml
+lab/*/.gitignore
+base/*/.gitignore

@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:jd="http://www.springframework.org/schema/jdbc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/jdbc
+        http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <jd:embedded-database id="dataSource" type="HSQL">
+        <jd:script location="classpath:schema.sql"/>
+        <jd:script location="classpath:test-data.sql"/>
+    </jd:embedded-database>
+
+</beans>
